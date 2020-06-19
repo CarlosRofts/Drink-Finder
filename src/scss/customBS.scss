@@ -1,0 +1,90 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// DOC BS: https://getbootstrap.com/docs/4.4/getting-started/theming/
+// BS VARIABLES REPO: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+// THEMING TUTO: https://uxplanet.org/how-to-customize-bootstrap-b8078a011203 
+
+
+//> BS VARIABLES
+// color inspiration codeply.com/go/uYPxiuNkbu
+
+$main : hsl(34, 100%, 55%);
+$second : rgb(235, 46, 93);
+  
+$theme-colors: (
+  "primary": $main,
+  "secondary": $second,
+  "success":#519700be,
+  "incomplete":#4a494e8f,  
+  "danger": rgb(255, 5, 88),  
+  "warning": #e46a07b7,
+  "info": #1d90d3,
+
+  );
+$enable-shadows:(true);
+
+.bg-gradient { 
+  background: linear-gradient( 360deg , rgb(255, 210, 63) 10%, rgb(255, 163, 16) 80%);   
+  border-radius:  0 0 0 10%;   
+  // box-shadow: 3px 8px 50px 5px rgba(240, 181, 31, 0.911);    
+}
+
+
+// BTN'S reset
+$btn-box-shadow:(none !important);
+$btn-focus-box-shadow:(none !important);
+$btn-active-box-shadow:(none !important);
+$btn-border-radius: (10px);
+$btn-font-size : (1.1em); 
+$btn-padding-y : (.7em);
+
+button[class*="btn-"]:not([class*="btn-outline"]):hover{    
+  transform: translateY(-1px);
+  filter: brightness(180%);   
+}
+
+
+//  Inputs
+$input-bg: (rgb(255, 255, 255));
+$input-focus-bg : ((rgb(255, 255, 255)));
+$input-focus-box-shadow:( none);
+$input-focus-border-color:( none !important);
+$input-font-size:(1.1em);  
+$input-border-width : (0px );
+
+// $input-line-height:(10px);
+$input-border-radius: (10px);
+$input-height : (3em);
+$input-padding-x:(.8em);      
+
+
+
+//> Custom Variables
+// .row-dark {
+//     @extend .row;
+//     background-color: #333333;
+//     color: #ffffff;
+// };
+
+
+// CARDS
+$card-border-width : (none !important);
+$card-border-radius : (50px) !important;
+$card-cap-bg: (rgba(255, 255, 255, 0));
+$card-spacer-x: (30px);
+$card-spacer-y: (0px);                      
+// $card-cap-color:(blue);                    
+// $card-height: (10px);                      
+$card-color:  (white);                      
+$card-bg: (rgb(255, 255, 255));   
+
+.card-columns { column-count: 3 !important; .card , .card-footer{border:none !important;} }
+@media (max-width: 1000px) { .card-columns { column-count: 2 !important; } }
+@media (max-width: 500px) { .card-columns { column-count: 1 !important; } }
+
+
+@import "../../~bootstrap/scss/bootstrap";
+
